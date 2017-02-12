@@ -43,8 +43,8 @@ class PasswordResetsTest < ActionDispatch::IntegrationTest
           params: { email: user.email,
                     user: { password:              "foobaz",
                             password_confirmation: "barquux" } }
-    #assert_select 'div#error_explanation'
-    # Empty password
+   # assert_select 'div#error_explanation'
+    # Empty password 
     patch password_reset_path(user.reset_token),
           params: { email: user.email,
                     user: { password:              "",
@@ -74,6 +74,6 @@ class PasswordResetsTest < ActionDispatch::IntegrationTest
                             password_confirmation: "foobar" } }
     assert_response :redirect
     follow_redirect!
-    assert_match /expired/i, response.body
+    assert_match(/expired/i, response.body)
   end
 end
