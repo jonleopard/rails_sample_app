@@ -1,17 +1,29 @@
-jon:
-  name: Jon Test
-  email: zombayz@gmail.com
+michael:
+  name: Michael Example
+  email: michael@example.com
   password_digest: <%= User.digest('password') %>
   admin: true
   activated: true
   activated_at: <%= Time.zone.now %>
 
-
-
+jon:
+  name: Jon Example
+  email: jon@example.com
+  password_digest: <%= User.digest('password') %>
+  admin: true
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 rick:
   name: Rick Sanchez
   email: rick@example.com
+  password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
+lana:
+  name: Lana Kane
+  email: hands@example.gov
   password_digest: <%= User.digest('password') %>
   activated: true
   activated_at: <%= Time.zone.now %>
